@@ -1,0 +1,27 @@
+<%= form_with model: @schedule, local: true do |f| %>
+
+    <div class="field">
+    <%= form.label :start_date %>
+    <%= form.datetime_select :start_date %>
+  </div>
+
+  
+  <div class="field">
+    <%= form.label :end_date %>
+    <%= form.datetime_select :end_date %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+
+
+  <%= form_with model: board, local: true do |f| %>
+    <%= render 'shared/error', object: f.object %>※
+    <div class="form-group">
+
+
+
+
+<% end %>
