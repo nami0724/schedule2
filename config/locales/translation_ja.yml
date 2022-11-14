@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    models:
+      schedule: スケジュール  #g
+
+    attributes:
+      schedule:
+        all_day: 終日  #g
+        confirm: 確認  #g
+        end_date: 終了日  #g
+        hensyu: 編集  #g
+        sakujo: 削除  #g
+        start_date: 開始日  #g
+        title: タイトル  #g
+        update_date: 更新日  #g

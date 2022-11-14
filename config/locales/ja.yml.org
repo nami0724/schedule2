@@ -1,0 +1,18 @@
+ja:
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"
+
+# ja:
+#  models:
+#  schedule: スケジュール
+#   attributes:
+#   schedule:
+#    title: タイトル
+#    start_date: 開始日
+#    end_date: 終了日
+#    all_day: 終日
+#    update_date: 更新日
+#    confirm: 確認
+#    edit: 編集
+#    delete: 削除

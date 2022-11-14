@@ -1,0 +1,87 @@
+<%= render "shared/header"%>
+<h1 class="top">スケジュール一覧</h1>
+
+<% if flash[:notice] %>
+<p class= "notice"><%= flash[:notice] %></p>
+<% end %>
+
+
+<table class ="table">
+<thead>
+  <tr>
+    <th>ID</th>
+    <th>タイトル</th>
+    <th>開始日</th>
+    <th>終了日</th>
+    <th>終日</th>
+    <th>スケジュール更新日時</th>
+    <th>確認</th>
+    <th>編集</th>
+    <th>削除</th>
+  </tr>
+</thead>
+
+<tbody class="contents">
+  <% @schedules.each do |schedule| %>
+   <tr>
+    <td>
+    <%= schedule.id %>
+    </td>
+    
+    <td>
+    <%= schedule.title %>
+    </td>
+
+    <td>
+    <%= schedule.start_date.to_date.strftime('%Y/%m/%d') %>
+    </td>
+    
+    <td>
+    <%= schedule.end_date.to_date.strftime('%Y/%m/%d') %>
+    </td>
+
+    <td>
+    <% if schedule.all_day == "1" %>
+    ○
+    <% else schedule.all_day == "0" %>
+    -
+    <% end %>
+    </td>
+    
+    <td>
+    <%= schedule.updated_at.strftime('%Y/%m/%d') %>
+    </td>
+
+    
+
+    
+    
+    <td>
+    <%= link_to '確認', schedule %>
+    </td>
+    <td>
+    <%= link_to '編集', [:edit,schedule]%>
+    </td>
+    <td>
+    <%= link_to '削除', schedule, method: :delete,data: {confirm:"本当に削除しますか？"} %>
+    </td>
+   </tr>
+  <% end %>
+
+</tbody>
+</table>
+
+
+ 
+
+
+<%= stylesheet_link_tag "common", :media => "all" %>
+
+
+
+
+<div class="button">
+<h2><%= link_to "スケジュール新規登録", :new_schedule %></h2>
+</div>
+
+<%= render "shared/footer"%>

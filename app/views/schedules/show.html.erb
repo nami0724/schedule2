@@ -1,0 +1,58 @@
+<%= render "shared/header"%>
+<h1 class="top">スケジュール詳細</h1>
+
+<table class="table">
+ <tr>
+  <th>タイトル</th>
+  <td><%= @schedule.title %></td>
+  </tr>
+
+  <th>開始日</th>
+  <td><%= @schedule.start_date.strftime('%Y/%m/%d') %></td>
+  </tr>
+
+  <tr>
+  <th>終了日</th>
+  <td><%= @schedule.end_date.strftime('%Y/%m/%d') %></td>
+  </tr>
+
+  <tr>
+  <th>終日</th>
+  <td>
+  <% if @schedule.all_day == "1" %>
+  ○
+  <% else @schedule.all_day == "0" %>
+  -
+  <% end %>
+  </td>
+  </tr>
+
+
+  <tr>
+  <th>投稿日時</th>
+  <td><%= @schedule.updated_at.strftime('%Y/%m/%d') %></td>
+  </tr>
+
+  <tr>
+  <th>スケジュールメモ</th>
+  <td><%= @schedule.confirm %></td>
+  </tr>
+
+
+
+</table>
+
+<div class="button">
+<h2><%= link_to 'スケジュールを編集する', [:edit,@schedule]%></h2>
+</div>
+
+<div class="button">
+<h2><%= link_to"スケジュール一覧に戻る",:schedules %></h2>
+</div>
+
+
+
+
+
+
+<%= render "shared/footer"%>

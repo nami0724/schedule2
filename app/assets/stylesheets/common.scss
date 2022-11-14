@@ -1,0 +1,96 @@
+.header {
+    width: 100%;
+    padding: 15px;
+    background-color: #d6ebff;
+    color: white;
+    position:fixed;
+    top: 0;
+    left: 0;
+}
+
+.footer {
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: #d6ebff;
+    color: white;
+    position: absolute;
+    bottom:0;
+    left: 0;
+}
+
+
+.table {
+    border-collapse: collapse;
+    border-color: coral;
+    font-size: 20px;
+    color: white;
+    background-color: #ffeaea;
+    width: 100%;
+    text-align: center;
+}
+
+.table a{
+    color: white;
+}
+
+.table th, td {
+    border: solid 1px #FFB6C1;
+    color: white;
+}
+
+.top {
+    font-size: 30px;
+    color: #DA70D6;
+    margin-top: 150px;
+}
+
+.notice {
+    background-color: #ccf;
+    padding: 5px;
+}
+
+.contents {
+color: white;
+}
+
+.btn {
+    width: fit-content;
+    height: 50px;
+    font-size:20px;
+    font-weight: bold;
+    padding: 0.2em 0.5em;
+    margin: 2em 0;
+    background: #ffeaea;
+    border: dashed 2px white;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.button {
+    width: fit-content;
+    height: 50px;
+    font-size:10px;
+    font-weight: bold;
+    padding: 0.2em 0.5em;
+    margin: 2em 0;
+    background: #ffeaea;
+    border: dashed 2px white;
+    color: white;
+    text-decoration: none;
+}
+
+.button a {
+    color: white;
+    text-decoration: none;
+}
+
+ul{
+    width: 2320px;
+    color:black; 
+    background:#ccf;
+    border:2px solid #990000 ;
+    padding:20px; font-weight:850;
+}
